@@ -10,7 +10,7 @@ body {
   margin: 0;
   color: #fff;
   background: #03040a;
-  font-family: "Segoe UI", system-ui, -apple-system, Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
 
@@ -463,12 +463,12 @@ h1 {
   transform: scale(1.08);
 }
 
-/* This card animates its y position forever; a backdrop-filter on top of that
-   would be re-blurred every frame, so it uses a near-opaque background. */
 .availability-card {
   z-index: 5;
   border: 1px solid var(--line);
-  background: #0c0d11f2;
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  background: #0c0d11c7;
   border-radius: 12px;
   align-items: flex-start;
   gap: 13px;
@@ -602,12 +602,11 @@ h3 {
   font-size: 25px;
 }
 
-/* No backdrop-filter here on purpose: there are ~35 cards on the page and
-   blurring each one forces the compositor to re-render them while scrolling.
-   The solid base layer reproduces the same look over the dark background. */
 .card {
-  background: var(--card), #0a0c12;
+  background: var(--card);
   border: 1px solid var(--line);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
   border-radius: 22px;
   padding: 28px;
   box-shadow: 0 28px 80px #00000042;
@@ -890,7 +889,7 @@ h3 {
 }
 
 .project-card.enterprise {
-  background: linear-gradient(135deg, #7ab7ff12, #ffffff09), #0b0e15;
+  background: linear-gradient(135deg, #7ab7ff12, #ffffff09), var(--card);
   border-color: #7ab7ff3d;
 }
 
@@ -1000,9 +999,6 @@ h3 {
   background: radial-gradient(circle, #7ab7ff52, #0000 62%);
   position: absolute;
   inset: 10%;
-  /* promote to its own layer so the blur is rasterised once instead of on
-     every frame of the pulsing opacity/scale animation */
-  will-change: opacity, transform;
 }
 
 .ai-workspace-video {
@@ -1045,7 +1041,9 @@ h3 {
   cursor: pointer;
   color: #fff;
   border: 1px solid var(--line);
-  background: linear-gradient(135deg, #7ab7ff12, #ffffff09), #0d0f16;
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  background: linear-gradient(135deg, #7ab7ff12, #ffffff09), #ffffff0d;
   border-radius: 20px;
   min-height: 155px;
   padding: 22px;
@@ -1146,7 +1144,7 @@ h3 {
 
 /* ---------- chatbot ---------- */
 .chat-box {
-  background: linear-gradient(135deg, #7ab7ff14, #ffffff08), #0a0c12;
+  background: linear-gradient(135deg, #7ab7ff14, #ffffff08), #ffffff0b;
 }
 
 .chat-status {
@@ -1416,14 +1414,5 @@ h3 {
   }
   .subsection-head h3 {
     font-size: 26px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  .mouse span {
-    animation: none;
   }
 }

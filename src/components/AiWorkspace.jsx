@@ -1,32 +1,8 @@
-import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import SectionHeader from "./SectionHeader.jsx";
 import { asset } from "../lib/asset.js";
 
 export default function AiWorkspace() {
-  const videoRef = useRef(null);
-
-  // The video is filtered in CSS, so decoding + filtering it while it is off
-  // screen costs frames everywhere else on the page. Only play it when visible.
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video || typeof IntersectionObserver === "undefined") return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          video.play().catch(() => {});
-        } else {
-          video.pause();
-        }
-      },
-      { threshold: 0.1 },
-    );
-
-    observer.observe(video);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section id="ai-workspace" className="section ai-video-section">
       <div className="container">
@@ -46,10 +22,8 @@ export default function AiWorkspace() {
           />
 
           <video
-            ref={videoRef}
             className="ai-workspace-video"
             src={asset("assets/ai-workspace.mp4")}
-            preload="metadata"
             autoPlay
             muted
             loop
