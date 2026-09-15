@@ -1,10 +1,5 @@
 import { useState } from "react";
-import {
-  AnimatePresence,
-  motion,
-  useScroll,
-  useSpring,
-} from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { ArrowDown, Mail, X } from "lucide-react";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
@@ -29,14 +24,6 @@ export default function App() {
   const [chatMessages, setChatMessages] = useState([INTRO_MESSAGE]);
   const [chatInput, setChatInput] = useState("");
 
-  // reading progress bar
-  const { scrollYProgress } = useScroll();
-  const progress = useSpring(scrollYProgress, {
-    stiffness: 120,
-    damping: 30,
-    restDelta: 0.001,
-  });
-
   function sendQuestion(question) {
     const text = question || chatInput.trim();
     if (!text) return;
@@ -54,7 +41,6 @@ export default function App() {
 
   return (
     <div className="app">
-      <motion.div className="scroll-progress" style={{ scaleX: progress }} />
       <div className="site-glow" />
 
       <Navbar />
