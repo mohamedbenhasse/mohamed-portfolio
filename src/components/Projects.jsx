@@ -20,19 +20,11 @@ export default function Projects() {
           {PROJECTS.map((project) => (
             <motion.div
               key={project.title}
-              className={`card project-card ${project.featured ? "featured" : ""} ${
-                project.enterprise ? "enterprise" : ""
-              }`}
+              className={`card project-card ${project.featured ? "featured" : ""}`}
               variants={fadeUp}
               whileHover={{ y: -8 }}
             >
               {project.featured && <div className="project-visual" />}
-              {project.status && (
-                <span className="project-status">
-                  <span className="blue-dot" style={{ marginTop: 0 }} />
-                  {project.status}
-                </span>
-              )}
               <h3>{project.title}</h3>
               <p className="text">{project.description}</p>
 

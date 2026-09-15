@@ -41,6 +41,15 @@ export const EXPERIENCE = [
       "Developing an advanced tracking system that allows internal teams and clients to monitor job progress, department-specific status updates, pending actions, and the full production lifecycle through controlled portals.",
       "Planning and integrating AI-assisted email workflows for Client Servicing, including internal/external email classification, read/unread visibility, request summarization, bullet-point structuring, and extraction of key order details for later mapping into documents and system entries.",
     ],
+    tech: [
+      "React",
+      "FastAPI",
+      "Python",
+      "AI Agents",
+      "Workflow Automation",
+      "Role-Based Access",
+      "Document Automation",
+    ],
   },
   {
     period: "Sep 9, 2026 - Present",
@@ -74,26 +83,12 @@ export const EXPERIENCE = [
   },
 ];
 
+// iPrint is deliberately not listed here — it lives in EXPERIENCE as a role so
+// the platform is never presented twice or as a finished product.
 export const PROJECTS = [
   {
-    title: "iPrint Enterprise Digital Platform",
-    featured: true,
-    enterprise: true,
-    status: "In Progress",
-    description:
-      "A custom company-wide platform for iPrint International designed to centralize department workflows, improve communication, automate document and Excel generation, reduce repeated manual data entry, and introduce AI-assisted email understanding for Client Servicing workflows. The platform includes department-specific tracking, controlled access, client-facing progress visibility, and future AI/ML expansion for estimation, procurement recommendations, and computer-vision-based monitoring.",
-    tech: [
-      "React",
-      "FastAPI",
-      "Python",
-      "AI Agents",
-      "Workflow Automation",
-      "Role-Based Access",
-      "Document Automation",
-    ],
-  },
-  {
     title: "YOLOv8 Vessel Classification",
+    featured: true,
     description:
       "Developed and optimized object detection models using satellite imagery, YOLOv8, Roboflow annotation conversion, segmentation masks, data cleaning, and model evaluation techniques.",
     tech: ["Python", "YOLOv8", "Computer Vision"],

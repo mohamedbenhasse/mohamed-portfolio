@@ -37,6 +37,14 @@ export default function Experience() {
                   <li key={bullet}>{bullet}</li>
                 ))}
               </ul>
+
+              {item.tech && (
+                <div className="tech-list">
+                  {item.tech.map((tech) => (
+                    <span key={tech}>{tech}</span>
+                  ))}
+                </div>
+              )}
             </motion.div>
           ))}
         </div>

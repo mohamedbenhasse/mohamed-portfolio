@@ -21,11 +21,9 @@ export default function About() {
             <p className="text">
               I work on practical AI, automation, full-stack systems, computer
               vision, cloud deployment, and enterprise workflow platforms. My
-              current focus is a company-wide digital platform for iPrint
-              International that centralizes department workflows, automates
-              document and Excel generation, and brings AI-assisted email
-              understanding into Client Servicing.
-            </p>
+              current focus is the company-wide digital platform I am building
+              for iPrint International.
+</p>
             <p className="text">
               Alongside that, my background covers YOLOv8 and OpenCV computer
               vision, deep learning, recommender systems, LLM-assisted
