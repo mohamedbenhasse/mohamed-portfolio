@@ -35,20 +35,20 @@ export const EXPERIENCE = [
     role: "AI Engineer & Developer (Project-Based)",
     company: "iPrint International - Doha, Qatar",
     bullets: [
-      "Developing a custom company-wide digital platform to replace generic ERP dependency and centralize operations across Client Servicing, Finance, Traffic, Production, and other departments.",
-      "Designing a role-based access system where each department sees, updates, and tracks only the workflows, documents, and lifecycle stages relevant to its responsibilities.",
-      "Building automation features for department workflows, including structured document generation, Excel sheet generation, job brief mapping, and reusable data entry flows to reduce manual copy-paste and operational delays.",
-      "Developing an advanced tracking system that allows internal teams and clients to monitor job progress, department-specific status updates, pending actions, and the full production lifecycle through controlled portals.",
-      "Planning and integrating AI-assisted email workflows for Client Servicing, including internal/external email classification, read/unread visibility, request summarization, bullet-point structuring, and extraction of key order details for later mapping into documents and system entries.",
+      "Developing a custom company-wide digital platform to centralize workflows across Client Servicing, Finance, Traffic, Production, and other departments.",
+      "Designing role-based workflows, structured document generation, Excel generation, job-brief mapping, tracking dashboards, and reusable data-entry flows to reduce manual work.",
+      "Building AI-assisted email workflows for classification, summarization, structured extraction, request routing, and mapping email content into operational records and documents.",
+      "Integrating Microsoft Graph, Microsoft Entra ID, Power Automate, APIs/webhooks, and database-backed workflow logic for email and process automation.",
     ],
     tech: [
       "React",
       "FastAPI",
       "Python",
       "AI Agents",
+      "Microsoft Graph",
+      "Entra ID",
+      "Power Automate",
       "Workflow Automation",
-      "Role-Based Access",
-      "Document Automation",
     ],
   },
   {
@@ -58,8 +58,8 @@ export const EXPERIENCE = [
     role: "Technology Department",
     company: "VisioRide - Qatar",
     bullets: [
-      "Supporting technology initiatives across development, AI integration, automation, and security improvement.",
-      "Contributing to future platform enhancements, internal tools, workflow improvements, and intelligent digital features.",
+      "Supporting software development, AI integration, automation, security improvement, Git/GitHub workflows, and production-focused web platform enhancements.",
+      "Contributing to technical planning and implementation for internal tools, intelligent digital features, and scalable platform improvements.",
     ],
   },
   {
@@ -67,86 +67,88 @@ export const EXPERIENCE = [
     role: "AI Engineer Intern",
     company: "Qatar Mobility Innovations Center (QMIC) - Doha, Qatar",
     bullets: [
-      "Built vessel detection and classification models from satellite imagery: curated datasets, converted annotations to YOLO format with Roboflow, and fine-tuned YOLOv8 models.",
-      "Improved self-driving perception by integrating segmentation-based weights and GrabCut masks into the detection workflow, raising model performance by more than 4%.",
-      "Ran model testing, output analysis, and statistical evaluation to compare iterations and validate improvements.",
+      "Researched and curated satellite-imagery datasets, converted annotations to YOLO format, trained and fine-tuned YOLOv8 vessel detection and classification models, and resolved framework/version issues.",
+      "Integrated segmentation-based weights into a self-driving perception workflow, refined data and annotations, and improved model performance by more than 4%.",
+      "Performed model testing, output analysis, and statistical evaluation to compare iterations and validate improvements.",
     ],
-  },
-  {
-    period: "Feb 2025",
-    role: "Data Analyst - Datathon Participant",
-    company: "Qatar National Datathon",
-    bullets: [
-      "Built an OpenAI-powered analytics website with voice recognition and data visualizations, letting users explore labour-force datasets conversationally.",
-      "Developed a predictive model for STEM-enrolment growth toward Qatar Vision 2030 and contributed data-driven recommendations for attracting high-skilled talent.",
-    ],
+    tech: ["Python", "YOLOv8", "Roboflow", "Computer Vision"],
   },
 ];
 
 // iPrint is deliberately not listed here — it lives in EXPERIENCE as a role so
-// the platform is never presented twice or as a finished product.
+// the platform is never presented twice or as a finished product. The same
+// applies to the QMIC vessel-detection work.
 export const PROJECTS = [
   {
-    title: "YOLOv8 Vessel Classification",
+    title: "Azure Infrastructure, Secure Networking & Cloud Deployment",
     featured: true,
     description:
-      "Developed and optimized object detection models using satellite imagery, YOLOv8, Roboflow annotation conversion, segmentation masks, data cleaning, and model evaluation techniques.",
-    tech: ["Python", "YOLOv8", "Computer Vision"],
+      "Provisioned and administered Azure Linux virtual machines with SSH key authentication and secure administrative access. Designed lab-scale topologies using VNets, subnets, NSGs, route tables, Azure Firewall, and Bastion, then validated controlled traffic between protected subnets. Built and tested an internal load balancer environment with backend VMs, health probes, and private connectivity, ran VM backup and restore exercises from snapshots, and deployed a containerized Flask application using Docker, AKS, and Cosmos DB.",
+    tech: [
+      "Azure",
+      "VNets / NSGs",
+      "Azure Firewall",
+      "Bastion",
+      "Load Balancer",
+      "AKS",
+      "Docker",
+      "Cosmos DB",
+    ],
   },
   {
-    title: "Recommender Systems",
+    title: "Enterprise Network Design & Simulation",
     description:
-      "Designed and evaluated recommendation approaches using content-based filtering, collaborative filtering, hybrid methods, and LLM-assisted recommendation concepts. Compared classical ML, matrix factorization, and deep-learning-integrated approaches while analyzing cold-start, sparsity, ranking quality, and personalization trade-offs.",
+      "Designed and configured a small-company network in Cisco Packet Tracer with routed internal and external segments, switches, two internal clients, a web server, a DNS server, and an external client. Configured static addressing, default gateways, DNS resolution, and HTTP services, then validated end-to-end connectivity with ICMP tests and browser access to the hosted site from both internal and external clients.",
+    tech: ["Cisco Packet Tracer", "Routing", "DNS", "HTTP"],
+  },
+  {
+    title: "Qatar National Datathon",
+    description:
+      "Collaborated on an OpenAI-powered analytics website with voice recognition and data visualizations, allowing conversational exploration of NPC datasets and labour-force insights. Built a predictive model to assess STEM-enrolment growth toward Qatar Vision 2030 targets and contributed data-driven recommendations for technology-sector talent development.",
+    tech: ["OpenAI", "Analytics", "Predictive Modelling", "Visualization"],
+  },
+  {
+    title: "News Recommender System",
+    description:
+      "Designed and evaluated content-based, collaborative, and hybrid recommenders on Microsoft MIND-small using TF-IDF user profiles and an implicit user-item matrix with Truncated SVD. Experimented with classical ML, deep-learning-integrated, and LLM-assisted approaches; content-based filtering performed best overall at HR@10 0.673, NDCG@10 0.357, Precision@10 0.078.",
     tech: ["ML", "Deep Learning", "LLMs", "SVD", "TF-IDF"],
   },
   {
-    title: "Computer Vision Mini Projects",
+    title: "Deep Learning Systems: CNN Robustness & Failure Modes",
     description:
-      "Built two OpenCV-based vision pipelines: a multi-scale Laplacian pyramid enhancement system that processed 13 images using 5 pyramid levels and weights [1.6, 1.4, 1.2, 1.1, 1.0], and an automated AR billboard pipeline using HSV detection, contour extraction, gamma correction, homography, and alpha blending.",
-    tech: ["OpenCV", "NumPy", "Image Processing", "AR"],
+      "Built a fixed CNN and ran controlled one-variable-at-a-time experiments on activation functions, dataset size, and learning rate to study representation, generalization, and optimization failure modes. Compared ReLU against tanh at about 91.5% and 91.8% test accuracy, tested 100/25/10/5% training data, and found 1e-3 the best learning rate at 91.83%.",
+    tech: ["Python", "CNNs", "TensorFlow", "Deep Learning"],
   },
   {
-    title: "CNN Fashion-MNIST Classification",
+    title: "Computer Vision & Image Processing",
     description:
-      "Built and tested a CNN on Fashion-MNIST with 28x28 grayscale images and 10 classes. ReLU reached about 91.5% test accuracy, tanh reached about 91.8%, and the best learning rate was 1e-3 with 91.83% test accuracy.",
-    tech: ["Python", "CNN", "Fashion-MNIST", "Deep Learning"],
+      "Built two OpenCV pipelines: an AR billboard compositing system using HSV and morphology for region detection, four-corner ordering, gamma-based brightness matching, perspective homography, and alpha blending; and a multi-scale enhancement system with 5-level Gaussian/Laplacian pyramids and weighted reconstruction across 13 images using weights [1.6, 1.4, 1.2, 1.1, 1.0].",
+    tech: ["OpenCV", "NumPy", "Homography", "AR"],
+  },
+  {
+    title: "ML Lifecycle Management System",
+    description:
+      "Developed an ML lifecycle workflow using MLflow and Apache Airflow for experiment tracking, model management, pipeline orchestration, deployment, monitoring, and documentation, with TensorFlow and Scikit-Learn models.",
+    tech: ["MLflow", "Airflow", "TensorFlow", "Scikit-Learn"],
+  },
+  {
+    title: "OpenPose Gait Analysis & Joint-Angle Measurement",
+    description:
+      "Used pretrained CMU OpenPose to extract lower-body keypoints from walking sequences and vector mathematics to calculate joint angles for gait analysis and abnormal-pattern monitoring.",
+    tech: ["OpenPose", "OpenCV", "Python"],
   },
   {
     title: "Gold Bakery - Luxury E-commerce Frontend",
     description:
-      "Designed and developed a live responsive storefront with reusable React components, product and order flows, smooth scrolling, and award-inspired motion. Backend and payment integration are in progress.",
+      "Designed and developed a live responsive storefront with reusable React components, product and order flows, smooth scrolling, and motion-driven interactions. Backend and payment integration are in progress.",
     tech: ["React", "Vite", "Framer Motion", "Vercel"],
     link: "https://gold-bakery.vercel.app/",
     linkLabel: "gold-bakery.vercel.app",
   },
   {
-    title: "Azure Web Application Deployment",
+    title: "CS188 Pacman Search & Adversarial AI",
     description:
-      "Built and deployed a containerized web application using Azure, Flask, Docker, Cosmos DB, and Azure Kubernetes Service to demonstrate scalable cloud-based deployment and orchestration.",
-    tech: ["Azure", "Flask", "Docker", "AKS"],
-  },
-  {
-    title: "ML Lifecycle Management",
-    description:
-      "Built an ML lifecycle management project using MLflow, Scikit-Learn, and TensorFlow for experiment tracking, deployment, monitoring, and documentation.",
-    tech: ["MLflow", "TensorFlow", "Scikit-Learn"],
-  },
-  {
-    title: "OpenPose Gait Analysis",
-    description:
-      "Used OpenPose and OpenCV to extract lower-body keypoints and calculate joint angles using vector dot product for gait analysis and abnormal-pattern monitoring.",
-    tech: ["OpenPose", "OpenCV", "Python"],
-  },
-  {
-    title: "AI Chatbot Data Platform",
-    description:
-      "Worked on an OpenAI chatbot-powered website with voice recognition and data visualizations to help users interact with analytics and extract insights from datasets.",
-    tech: ["OpenAI", "Chatbot", "Analytics"],
-  },
-  {
-    title: "Pacman AI Search Projects",
-    description:
-      "Worked on CS188 Pacman Project 1 and Project 2, implementing DFS, BFS, A* Search, Minimax, Alpha-Beta Pruning, and Expectimax. The projects focused on game logic, adversarial agents, and optimization.",
+      "Implemented classical search and adversarial decision algorithms in the Pacman environment, including DFS, BFS, A*, Minimax, Alpha-Beta Pruning, and Expectimax, focusing on decision quality and search efficiency.",
     tech: ["Python", "AI Search", "A*", "Minimax"],
   },
 ];
@@ -288,5 +290,5 @@ export const CERTIFICATES = [
 export const QUICK_QUESTIONS = [
   "What is Mohamed building at iPrint International?",
   "Does Mohamed have experience with YOLOv8 and computer vision?",
-  "What cloud, backend, and DevOps tools does Mohamed know?",
+  "What Azure and cloud infrastructure work has Mohamed done?",
 ];

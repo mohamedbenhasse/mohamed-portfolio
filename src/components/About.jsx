@@ -19,17 +19,18 @@ export default function About() {
           >
             <h3>AI Engineer &amp; Developer with a builder mindset.</h3>
             <p className="text">
-              I work on practical AI, automation, full-stack systems, computer
-              vision, cloud deployment, and enterprise workflow platforms. My
-              current focus is the company-wide digital platform I am building
-              for iPrint International.
-</p>
+              I work across cloud infrastructure, AI systems, automation,
+              full-stack development, and system operations. My current focus is
+              the company-wide digital platform I am building for iPrint
+              International.
+            </p>
             <p className="text">
-              Alongside that, my background covers YOLOv8 and OpenCV computer
-              vision, deep learning, recommender systems, LLM-assisted
-              workflows, MLOps on Azure and Docker, backend work with FastAPI,
-              Flask, Node.js and PostgreSQL, and system administration across
-              Active Directory and Microsoft 365.
+              My hands-on background covers Azure virtual machines, secure
+              networking, firewalling, load balancing, backup and restore, and
+              containerized deployment, alongside AI agents and RAG workflows,
+              YOLOv8 and OpenCV computer vision, deep learning, recommender
+              systems, and backend work with FastAPI, Flask, Node.js and
+              PostgreSQL.
             </p>
           </motion.div>
 

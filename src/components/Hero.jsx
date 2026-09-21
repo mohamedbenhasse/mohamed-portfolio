@@ -34,13 +34,14 @@ export default function Hero() {
 
           <p className="role-line">
             AI Engineer &amp; Developer <b>|</b> Full-Stack Developer <b>|</b>{" "}
-            System Administrator
+            Cloud &amp; Infrastructure
           </p>
 
           <p className="hero-description">
-            I build practical AI, automation, and full-stack systems — from
-            computer vision and cloud deployment to enterprise workflow
-            platforms that real departments run on.
+            I build practical AI, automation, and full-stack systems on solid
+            cloud foundations — from secure Azure networking and containerized
+            deployment to enterprise workflow platforms that real departments
+            run on.
           </p>
 
           <div className="hero-actions">
